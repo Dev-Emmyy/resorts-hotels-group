@@ -196,6 +196,13 @@ export default function Home() {
       <div>
       {apiData.map((item) => (
           <div key={item.id}>
+            <Image
+            src={item.image}
+            alt="img"
+            width={700}
+            height={700}
+            loading="lazy"
+            />
             <p>{item.name}</p>
           </div>
         ))}
