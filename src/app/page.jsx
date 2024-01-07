@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -193,19 +194,31 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-      {apiData.map((item) => (
-          <div key={item.id}>
+      <div class="bg-[#2f4137] text-zinc-50 flex flex-col justify-between items-center pt-28 pb-14">
+      <div class="z-90 w-4/5 flex flex-col justify-center items-center">
+          <Image
+            src="/img/rating.png"
+            alt="rating"
+            width={150}
+            height={150} 
+            />
+          <h1 class="font-serif text-4xl font-normal my-3">Rooms & Living</h1>
+          <p class="font-sans text-base text-center font-normal my-3">Explore a diverse range of comfortable and stylish rooms, including Luxury, Single, and Family options. Experience modern amenities, breathtaking views, and unparalleled hospitality. Reserve your perfect retreat today.</p>
+        </div>
+        <div class="flex flex-wrap justify-between items-center px-4">
+        {apiData.map((item) => (
+          <Link href={item} key={item.id} class="pt-12">
             <Image
             src={item.image}
             alt="img"
-            width={700}
-            height={700}
+            width={600}
+            height={600}
             loading="lazy"
             />
-            <p>{item.name}</p>
-          </div>
+            <h2 class="pt-4 font-serif text-2xl font-normal my-3">{item.name}</h2>
+          </Link>
         ))}
+        </div>
       </div>
       </>
   )
