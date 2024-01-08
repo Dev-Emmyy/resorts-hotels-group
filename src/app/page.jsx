@@ -220,6 +220,21 @@ export default function Home() {
         ))}
         </div>
       </div>
+
+      <div class="bg-[url('/img/room_vid.jpg')] bg-cover bg-center bg-no-repeat bg-center bg-local md:bg-fixed min-h-screen text-zinc-50 relative">
+        <div class="bg-[#333333] bg-opacity-50 py-5 px-10 flex justify-between items-center h-screen text-center">
+          <div class="z-90 w-full flex flex-col justify-center items-center text-center">
+          <Image
+            src="/img/rating.png"
+            alt="rating"
+            width={200}
+            height={200} 
+            />
+          <h4 class="font-serif text-base font-normal my-3">RESORT HOTEL 128</h4>
+          <h3 class="font-serif text-5xl font-normal my-3">Hotel Promotional Video</h3>
+          </div>
+        </div>
+      </div>
       </>
   )
 }
