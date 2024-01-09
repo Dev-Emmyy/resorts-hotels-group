@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
+import { FaPlayCircle } from "react-icons/fa";
 
 
 export default function Home() {
@@ -232,6 +232,9 @@ export default function Home() {
             />
           <h4 class="font-serif text-base font-normal my-3">RESORT HOTEL 128</h4>
           <h3 class="font-serif text-5xl font-normal my-3">Hotel Promotional Video</h3>
+          <FaPlayCircle
+          class="text-4xl w-10 h-10"
+          />
           </div>
         </div>
       </div>
