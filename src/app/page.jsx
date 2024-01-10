@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FaPlayCircle } from "react-icons/fa";
-
+import { FaRegPlayCircle } from "react-icons/fa";
 
 export default function Home() {
   const [apiData, setApiData] = useState([]);
@@ -22,6 +22,16 @@ export default function Home() {
 
       fetchData();
     }, []);
+
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
 
   return (
     <>
@@ -230,11 +240,21 @@ export default function Home() {
             width={200}
             height={200} 
             />
-          <h4 class="font-serif text-base font-normal my-3">RESORT HOTEL 128</h4>
+          <h4 class="font-serif text-base font-normal my-3">RESORTS & HOTELS</h4>
           <h3 class="font-serif text-5xl font-normal my-3">Hotel Promotional Video</h3>
-          <FaPlayCircle
-          class="text-4xl w-10 h-10"
-          />
+          {isHovered ? (
+        <FaRegPlayCircle
+              className="w-20 h-20 cursor-pointer transition duration-5000 ease-in-out"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
+          ) : (
+            <FaPlayCircle
+              className="w-20 h-20 cursor-pointer transition duration-5000 ease-in-out"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
+          )}
           </div>
         </div>
       </div>
