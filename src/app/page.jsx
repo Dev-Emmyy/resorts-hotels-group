@@ -213,7 +213,7 @@ export default function Home() {
             height={150} 
             />
           <h1 class="font-serif text-4xl font-normal my-3">Rooms & Living</h1>
-          <p class="font-sans text-base text-center font-normal my-3">Explore a diverse range of comfortable and stylish rooms, including Luxury, Single, and Family options. Experience modern amenities, breathtaking views, and unparalleled hospitality. Reserve your perfect retreat today.</p>
+          <p class="font-sans text-base text-center font-normal my-3">Explore a diverse range of comfortable and stylish rooms, including Luxury, Single, and Family options. Experience modern amenities, breathtaking views, and unparalleled hospitality. Reserve a perfect retreat today.</p>
         </div>
         <div class="flex flex-wrap justify-between items-center px-4">
         {apiData.map((item) => (
